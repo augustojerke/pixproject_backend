@@ -9,12 +9,12 @@ export class UsuarioService{
         await repository.Incluir(usuario);
     }
 
-    async Alterar(){
-        
+    async Alterar(usuario: Usuario){
+        await repository.Alterar(usuario);
     }
 
-    async Excluir(){
-        
+    async Excluir(id: number){
+        await repository.Excluir(id);
     }
 
 }
