@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  postgres:
+    container_name: pixproject_docker
+    image: bitnami/postgresql:latest
+    ports:
+      - '5431:5432'
+    environment:
+      - POSTGRES_USER=postgre
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=pixproject_db
+    volumes:
+      - pixproject_pg_data:/bitnami/postgresql
+
+volumes:
+  pixproject_pg_data:
