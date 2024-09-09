@@ -7,20 +7,18 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Usuario{
-  usu_id    Int   @id @default(autoincrement())
+model Usuario {
+  usu_id    Int    @id @default(autoincrement())
   usu_nome  String
   usu_senha String
+  usu_email String
 }
 
-// Usuario
-
-//  - Criar campo de email
-
-// PagamentoPix
-
-//  - Criar a tabela e campos:
-//     - id, nome, valortotal, datadecriacao, numerodeparticipantes, chavepix
-//  - datadecricao tem um valor default do prisma que salva a
-//      data de quando o registro foi criado, só pesquisar no site ou perguntar pro chat
-//  - Criar a Controller, Service E Reporitory com incluir, alterar, excluir.
+model PagamentoPix {
+  pix_id          Int      @id @default(autoincrement())
+  pix_nome        String
+  pix_valorTotal  Decimal
+  pix_numPart     Int
+  pix_chave       String
+  pix_dataCriacao DateTime @default(now())
+}
