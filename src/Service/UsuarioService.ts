@@ -17,4 +17,10 @@ export class UsuarioService{
         await repository.Excluir(id);
     }
 
+    async UsuarioExiste(usu_nome: string){
+
+        // Retornar true se o usuario existe no banco, false caso contrario, buscando pelo nome.
+
+    }
+
 }

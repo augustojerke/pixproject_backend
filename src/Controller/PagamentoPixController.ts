@@ -41,4 +41,10 @@ export class PagamentoPixController{
             res.status(500).json({ message: e.message })
         }
     }
+
+    async BuscarPorId(req: Request, res: Response){
+
+        // Retornar registro do pagamento através do id
+
+    }
 }
